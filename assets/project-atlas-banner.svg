@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="420" viewBox="0 0 1400 420" role="img" aria-labelledby="title desc">
+  <title id="title">Project Atlas</title>
+  <desc id="desc">Enterprise homelab portfolio banner</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="55%" stop-color="#18284a"/>
+      <stop offset="100%" stop-color="#124e66"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#65d6ff" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#65d6ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1400" height="420" rx="28" fill="url(#bg)"/>
+  <circle cx="1180" cy="200" r="250" fill="url(#glow)"/>
+  <g opacity=".2" stroke="#a7e8ff">
+    <path d="M900 60h350M900 110h280M900 160h390M900 210h250M900 260h330M900 310h290"/>
+    <path d="M980 35v350M1060 35v350M1140 35v350M1220 35v350"/>
+  </g>
+  <g transform="translate(1040 90)" fill="none" stroke="#b5eeff" stroke-width="8">
+    <ellipse cx="150" cy="120" rx="118" ry="62"/>
+    <ellipse cx="150" cy="120" rx="55" ry="118" transform="rotate(26 150 120)"/>
+    <ellipse cx="150" cy="120" rx="55" ry="118" transform="rotate(-26 150 120)"/>
+    <circle cx="150" cy="120" r="14" fill="#b5eeff"/>
+  </g>
+  <text x="90" y="150" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="700">PROJECT ATLAS</text>
+  <text x="94" y="215" fill="#b5eeff" font-family="Arial, Helvetica, sans-serif" font-size="30" letter-spacing="4">PLAN • BUILD • DOCUMENT • IMPROVE</text>
+  <text x="94" y="290" fill="#eaf8ff" font-family="Arial, Helvetica, sans-serif" font-size="28">Enterprise Homelab &amp; Infrastructure Portfolio</text>
+  <text x="94" y="340" fill="#a7bed3" font-family="Arial, Helvetica, sans-serif" font-size="21">Proxmox • Linux • Docker • Networking • Storage • Security • Automation</text>
+</svg>

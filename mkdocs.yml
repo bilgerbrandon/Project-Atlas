@@ -1,0 +1,29 @@
+site_name: Project Atlas
+site_description: Enterprise homelab and infrastructure portfolio
+site_author: Brandon Bilger
+repo_name: Project-Atlas
+theme:
+  name: readthedocs
+nav:
+  - Home: README.md
+  - Documentation:
+      - Overview: docs/README.md
+      - Planning: docs/01-Planning/README.md
+      - Hardware: docs/02-Hardware/README.md
+      - Network: docs/03-Network/README.md
+      - Proxmox: docs/04-Proxmox/README.md
+      - Docker: docs/05-Docker/README.md
+      - Storage: docs/06-Storage/README.md
+      - Media Stack: docs/07-Media-Stack/README.md
+      - Monitoring: docs/08-Monitoring/README.md
+      - Additive Manufacturing: docs/09-Additive-Manufacturing/README.md
+      - Lessons Learned: docs/10-Lessons-Learned/README.md
+  - Roadmap: ROADMAP.md
+  - Backlog: BACKLOG.md
+  - Project Journal: PROJECT-JOURNAL.md
+  - Changelog: CHANGELOG.md
+markdown_extensions:
+  - tables
+  - fenced_code
+  - toc:
+      permalink: true
