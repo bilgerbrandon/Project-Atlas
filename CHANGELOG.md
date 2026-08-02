@@ -43,3 +43,30 @@ All notable changes to Project Atlas are documented here.
 - Homepage
 - Dozzle
 - Tailscale remote access
+
+## Sprint 2 – Media Platform
+
+### Added
+
+- Jellyfin media server
+- Prowlarr index management
+- Sonarr TV automation
+- Radarr movie automation
+- qBittorrent download client
+- FlareSolverr support
+
+### Configured
+
+- Shared `/media/data` storage
+- Docker networking
+- Unified media library structure
+- Jellyfin media libraries
+- Sonarr and Radarr root folders
+- qBittorrent integration
+
+### Fixed
+
+- VirtIOFS storage mapping
+- Proxmox storage mount
+- Jellyfin volume mapping
+- Container path standardization

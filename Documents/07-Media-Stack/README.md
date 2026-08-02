@@ -1,49 +1,52 @@
-# Phase 07 — Media Stack
+# Media Stack
 
-## Status
+## Overview
 
-Planned. Deployment begins after storage presentation and permissions are finalized.
+The Atlas Media Stack provides automated media management using Docker containers running on an Ubuntu Server virtual machine hosted by Proxmox.
 
-## Goal
+## Services
 
-Deploy a maintainable media platform using consistent paths and TRaSH Guides-aligned configuration.
-
-## Planned Services
-
-| Service | Role |
-|---|---|
-| Jellyfin | Media playback |
-| Sonarr | TV-series management |
+| Service | Purpose |
+|----------|---------|
+| Jellyfin | Media server |
+| Sonarr | TV series management |
 | Radarr | Movie management |
 | Prowlarr | Indexer management |
-| Bazarr | Subtitle management |
 | qBittorrent | Download client |
-| Recyclarr | Configuration synchronization |
+| FlareSolverr | Cloudflare proxy for supported indexers |
 
-## Deployment Order
+## Storage Layout
 
-1. Finalize storage paths and permissions
-2. Deploy download client
-3. Deploy Prowlarr
-4. Deploy Sonarr
-5. Deploy Radarr
-6. Deploy Bazarr
-7. Deploy Jellyfin
-8. Configure Recyclarr
-9. Verify hardlinks and imports
-10. Test backup and restore
+```
+/media/data
+├── media
+│   ├── movies
+│   └── tv
+│
+├── torrents
+│   ├── movies
+│   ├── tv
+│   └── incomplete
+│
+└── docker
+    ├── sonarr
+    ├── radarr
+    ├── prowlarr
+    └── qbittorrent
+```
 
-## Quality Requirements
+## Architecture
 
-- No inconsistent container paths
-- No unnecessary duplicate copies
-- Health checks enabled
-- Persistent configuration stored separately from media
-- Secrets excluded from Git
-- Hardware transcoding documented
-- Remote access controlled and intentional
-
----
-
-[← Return to Project Atlas](../../README.md) · [Documentation index](../README.md)
-
+```
+Sonarr ─────┐
+            │
+Radarr ─────┼────► qBittorrent
+            │
+Prowlarr ───┘
+                 │
+                 ▼
+           /media/data
+                 │
+                 ▼
+             Jellyfin
+```
